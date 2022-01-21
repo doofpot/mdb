@@ -2,7 +2,7 @@
 
 ## Unreleased
 
- - None
+ - add "bin" parameter with a default to strip.
 
 ## 0.5.0 (2021-10-19)
 
