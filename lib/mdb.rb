@@ -12,8 +12,8 @@ module Mdb
   end
   class Error < RuntimeError; end
 
-  def self.open(file)
-    Mdb::Database.new(file)
+  def self.open(file, options={})
+    Mdb::Database.new(file, options)
   end
 
 end
