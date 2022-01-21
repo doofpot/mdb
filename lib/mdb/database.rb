@@ -19,7 +19,7 @@ module Mdb
 
 
 
-    attr_reader :file, :delimiter
+    attr_reader :file, :delimiter, :bin
 
 
 
