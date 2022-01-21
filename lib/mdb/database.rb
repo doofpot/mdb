@@ -14,6 +14,7 @@ module Mdb
 
       @file = file
       @delimiter = options.fetch :delimiter, "|"
+      @bin = options.fetch :bin, "strip"
     end
 
 
@@ -41,7 +42,7 @@ module Mdb
       raise TableDoesNotExistError, "#{table.inspect} does not exist in #{file_name.inspect}" unless tables.member?(table)
       date_flags = "-D '%F %T'"
       date_flags << " -T '%F %T'" if supports_datetime?
-      execute "mdb-export #{date_flags} -d #{Shellwords.escape(delimiter)} #{file_name} #{Shellwords.escape(table)}", &block
+      execute "mdb-export #{date_flags} -d #{Shellwords.escape(delimiter)} -b #{Shellwords.escape(bin)} #{file_name} #{Shellwords.escape(table)}", &block
     end
 
 
