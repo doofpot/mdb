@@ -2,7 +2,9 @@
 
 ## Unreleased
 
- - add "bin" parameter with a default to strip.
+## 0.5.1 (2022-01-28)
+
+- Added the option to supply a parameter for binary fields (default to 'strip') database = Mdb.open(PATH_TO_FILE, {:bin => "octal|hex"})
 
 ## 0.5.0 (2021-10-19)
 
